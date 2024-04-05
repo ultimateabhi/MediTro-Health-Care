@@ -22,7 +22,7 @@ const UserAppointment = () => {
 
   // load appointments
   const loadAppointments = (user) => {
-    fetch(`https://meditro-server-production.up.railway.app/my_appointment/${user?.email}`, {
+    fetch(`http://localhost:5001/my_appointment/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -42,7 +42,7 @@ const UserAppointment = () => {
   const changStatus = (e, data) => {
     const stage = e.target.value;
     const id = data._id;
-    const url = `https://meditro-server-production.up.railway.app/appointment?email=${user?.email}&id=${id}`;
+    const url = `http://localhost:5001/appointment?email=${user?.email}&id=${id}`;
 
     fetch(url, {
       method: "PUT",
@@ -69,7 +69,7 @@ const UserAppointment = () => {
   // delete appointment for admin
   const deleteAppointment = (id) => {
     const isConfirm = window.confirm("Want To Remove ?");
-    const url = `https://meditro-server-production.up.railway.app/appointments/${id}`;
+    const url = `http://localhost:5001/appointments/${id}`;
     if (isConfirm) {
       fetch(url, {
         method: "DELETE",

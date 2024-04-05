@@ -1,10 +1,10 @@
 export const Users = [
   {
     id: 1,
-    first_name: "Emiline",
-    last_name: "McClune",
-    email: "emcclune0@xrea.com",
-    gender: "Female",
+    first_name: "Abhishek",
+    last_name: "Agarwal",
+    email: "abhiag.719@gmail.com",
+    gender: "Male",
   },
   {
     id: 2,

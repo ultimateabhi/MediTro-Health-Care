@@ -44,7 +44,7 @@ const Booking = () => {
       stage: "pending",
     };
     // console.log(bookingInfo);
-    fetch("https://meditro-server-production.up.railway.app/appointment", {
+    fetch("http://localhost:5001/appointment", {
       method: "POST",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

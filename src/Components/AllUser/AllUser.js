@@ -30,7 +30,7 @@ const AllUser = () => {
   }, [user]);
 
   const laodUsers = (user) => {
-    fetch(`https://meditro-server-production.up.railway.app/users/${user?.email}`, {
+    fetch(`http://localhost:5001/users/${user?.email}`, {
       method: "GET",
       headers: {
         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
@@ -44,7 +44,7 @@ const AllUser = () => {
   };
 
   const removeUser = (email) => {
-    const url = `https://meditro.herokuapp.com/user/${email}`;
+    const url = `http://localhost:5001/user/${email}`;
     const isConfirm = window.confirm(
       `This will remove user and each appointment of this current user. Are you sure?`
     );

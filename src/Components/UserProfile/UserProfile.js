@@ -21,7 +21,7 @@ const UserProfile = () => {
   const [disabled, setDisabled] = useState(true);
 
   const getData = (email) => {
-    const url = `https://meditro-server-production.up.railway.app/profile/${email}`;
+    const url = `http://localhost:5001/profile/${email}`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -42,7 +42,7 @@ const UserProfile = () => {
 
     const updatedData = { birthDay, city, country, zipCode, bloodGroup, state };
 
-    const url = `https://meditro-server-production.up.railway.app/profile/${user?.email}`;
+    const url = `http://localhost:5001/profile/${user?.email}`;
     fetch(url, {
       method: "PUT",
       headers: {

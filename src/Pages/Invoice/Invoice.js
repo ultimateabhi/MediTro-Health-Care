@@ -16,7 +16,7 @@ const Invoice = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://meditro-server-production.up.railway.app/invoice/${id}`)
+    fetch(`http://localhost:5001/invoice/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setInvoice(data);
