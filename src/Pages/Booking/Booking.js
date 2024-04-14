@@ -104,7 +104,7 @@ const Booking = () => {
                     <input
                       required
                       type="number"
-                      placeholder={"01XXXXXXX"}
+                      placeholder={"+91 XXXXXXXXXX"}
                       name="number"
                     />
                   </div>
