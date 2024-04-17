@@ -1,0 +1,124 @@
+.appointment-body {
+  width: calc(100vw - 200px);
+  margin-left: auto;
+  overflow: scroll;
+  height: calc(100vh - 100px);
+  transition: all 0.3s linear;
+
+  /* background: #ececfa; */
+}
+
+.appointment-body table {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.remover-btn {
+  background-color: white;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: red;
+  font-size: 1.3rem;
+}
+.fixed {
+  position: fixed;
+  width: 100%;
+  height: 35px;
+  z-index: 9999;
+}
+.fixed input {
+  width: 60%;
+  padding: 0;
+  border: 2px solid #b2f0fb;
+  outline-color: #20deff;
+  padding: 0 1em;
+}
+.fixed select {
+  width: 40%;
+  padding: 0 1em;
+}
+.select-tab {
+  padding: 5px;
+}
+.select-tab option {
+  background-color: transparent;
+}
+.td-container {
+  position: relative;
+}
+.td-container:hover .td-item {
+  display: block;
+}
+.td-item {
+  height: auto;
+  width: auto;
+  padding: 1rem;
+  /* background-color: ; */
+  position: absolute;
+  display: none;
+  z-index: 999999;
+}
+table,
+th,
+td {
+  /* border: 1px solid #b2f0fb; */
+  border-collapse: collapse;
+  padding: 1rem;
+}
+
+thead th {
+  /* background-color: whitesmoke; */
+  /* padding: 10px; */
+  text-transform: uppercase;
+  /* color: var(--primary-text); */
+  color: #0d6efd;
+  font-size: 15px;
+}
+tr:nth-child(even) {
+  background-color: rgba(225, 226, 246, 0.5);
+}
+table .time {
+  color: var(--hover-text);
+  font-weight: bold;
+}
+table td,
+.date {
+  /* color: var(--primary-text); */
+  color: #0d6efd;
+  font-weight: bold;
+}
+.d-massage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 200px);
+}
+.d-massage h3 {
+  text-transform: capitalize;
+  color: var(--hover-text);
+  padding: 1rem 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1199px) {
+  .appointment-body {
+    width: calc(100vw - 250px);
+  }
+}
+@media screen and (max-width: 999px) {
+  .appointment-body {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 670px) {
+  thead th,
+  td,
+  span {
+    font-size: 12px;
+  }
+}
